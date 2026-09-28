@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    text-align: center;
+    font-family: 'Black Ops One', cursive;
+    text-shadow: 0px 0px 1px black;
+}
+
+.intro {
+    height: 100vh;
+
+    background-image: url("./images/52b7fa278c3b70260d54966b4a23e44c2e19752f.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: clamp(60px, 15vw, 250px);
+    text-shadow: 2px 2px 1px black;
+    color: blanchedalmond;
+}
+
+.about {
+    min-height: 100vh;
+    padding: 50px 0;
+    background-color: blanchedalmond;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+}
+
+.about h2 {
+    font-size: 80px;
+}
+.info{
+    width: min(90%, 800px)
+}
+.info p {
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+.visit-place{
+    min-height: 100vh;
+    padding: 50px 0;
+    background-color: blanchedalmond;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+}
+.visit {
+    width: min(90%, 900px);
+}
+
+.visit h2 {
+    font-size: clamp(40px, 8vw, 80px);
+    margin-bottom: 30px;
+}
+.visit img {
+    border:3px solid #cecec8;
+    border-radius: 20px;
+    height: auto;
+    width: min(90vw, 400px); 
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.name, p{
+    margin-bottom: 20px;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+/* اسکرول نرم برای کل صفحه */
+html {
+    scroll-behavior: smooth;
+}
+
+/* استایل دهی به هدر */
+.navbar {
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.075); 
+    padding: 20px 0;
+    z-index: 1000; 
+    cursor: pointer;
+}
+
+
+.navbar ul {
+    list-style: none; 
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none; 
+    font-family: sans-serif; 
+    font-size: 20px;
+    text-shadow: none; 
+    transition: color 0.3s; 
+}
+
+
+.navbar a:hover {
+    color: blanchedalmond;
+}
+.footer {
+    background-color: #222; 
+    color: blanchedalmond; 
+    padding: 20px 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-shadow: none; 
+}
