@@ -41,11 +41,17 @@
             <h2>Top places to visit</h2>
             <h3 class="name">Azadi Tower</h3>
             <p>(click to see on map)</p>
-            <a href="https://www.google.com/maps/search/azadi+tower/@35.6997996,51.3372123,17z?entry=s&sa=X&ved=1t%3A199789" target="_blank"><img src="./images/azadi.avif" alt="Azadi Tower Tehran" ></a>
+            <a href="#" onclick="openMap('Azadi Tower Tehran'); return false;">
+                <img src="./images/azadi.avif" alt="Azadi Tower">
+            </a>
             <h3 class="name">Bazar tehran</h3>
-            <a href="https://www.google.com/maps/place/Tehran+Grand+Bazaar/data=!4m2!3m1!1s0x0:0x488924851b71a233?sa=X&ved=1t:2428&ictx=111" target="_blank"><img src="./images/photo-1579932979622-fc012038564d.avif" alt="Bazar Tehran" ></a>
+            <a href="#" onclick="openMap('Bazar Tehran'); return false;">
+                <img src="./images/photo-1579932979622-fc012038564d.avif" alt="Bazar Tehran">
+            </a>
             <h3 class="name">Golestan palace</h3>
-            <a href="https://www.google.com/maps/dir/35.7596886,51.4719381/Golestan+Palace,+Tehran+District+12+Fifth+Khordad+Avenue+Arg+Sqr,+Panzdah-e-Khordad+St,+Iran/@35.7075737,51.3476552,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3f8e01f27917eb6b:0xe953925ee5058ce!2m2!1d51.4205181!2d35.6797523?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank"><img src="./images/golestan2.jpeg" alt="Golestan palace" ></a>
+            <a href="#" onclick="openMap('Golestan Palace Tehran'); return false;">
+                <img src="./images/golestan2.jpeg" alt="Golestan palace">
+            </a>
         </div>       
 
     
@@ -54,5 +60,19 @@
     <footer class="footer">
         <p>Disigned by Rozhin</p>
     </footer>
+    <script>
+        
+        function openMap(locationName) {
+            var isMobile = /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            
+            var safeLocation = encodeURIComponent(locationName);
+            
+            if (isMobile) {
+                window.location.href = "geo:0,0?q=" + safeLocation;
+            } else {
+                window.open("https://www.google.com/maps/search/" + safeLocation, "_blank");
+            }
+        }
+    </script>
 </body>
 </html>
