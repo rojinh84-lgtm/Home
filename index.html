@@ -41,15 +41,15 @@
             <h2>Top places to visit</h2>
             <h3 class="name">Azadi Tower</h3>
             <p>(click to see on map)</p>
-            <a href="#" onclick="openMap('Azadi Tower Tehran'); return false;">
+            <a href="#" onclick="openMap('Azadi Tower Tehran', 35.7329, 51.4079); return false;">
                 <img src="./images/azadi.avif" alt="Azadi Tower">
             </a>
             <h3 class="name">Bazar tehran</h3>
-            <a href="#" onclick="openMap('Bazar Tehran'); return false;">
+            <a href="#" onclick="openMap('Bazar Tehran', 35.7219, 51.4244); return false;">
                 <img src="./images/photo-1579932979622-fc012038564d.avif" alt="Bazar Tehran">
             </a>
             <h3 class="name">Golestan palace</h3>
-            <a href="#" onclick="openMap('Golestan Palace Tehran'); return false;">
+            <a href="#" onclick="openMap('Golestan Palace Tehran', 35.7061, 51.4329); return false;">
                 <img src="./images/golestan2.jpeg" alt="Golestan palace">
             </a>
         </div>       
@@ -61,18 +61,17 @@
         <p>Disigned by Rozhin</p>
     </footer>
     <script>
+    function openMap(locationName, lat, lng) {
+        var isMobile = /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        var safeLocation = encodeURIComponent(locationName);
         
-        function openMap(locationName) {
-            var isMobile = /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        if (isMobile) {
             
-            var safeLocation = encodeURIComponent(locationName);
-            
-            if (isMobile) {
-                window.location.href = "geo:0,0?q=" + safeLocation;
-            } else {
-                window.open("https://www.google.com/maps/search/" + safeLocation, "_blank");
-            }
+            window.location.href = "geo:" + lat + "," + lng + "?q=" + lat + "," + lng + "(" + safeLocation + ")";
+        } else {
+            window.open("https://www.google.com/maps/search/?api=1&query=" + lat + "," + lng, "_blank");
         }
-    </script>
+    }
+</script>
 </body>
 </html>
